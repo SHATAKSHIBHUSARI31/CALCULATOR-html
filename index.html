@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=">
+    <title>CALCULATOR - BY SHATAKSHI</title>
+</head>
+<style>
+    *{
+        margin: 0;
+        padding: 0;
+        box-sizing: 0;
+        
+
+    }
+    body{
+        width: 110%;
+        height: 110%;
+        display: grid;
+        place-items: center;
+        background: linear-gradient(45deg,#717371#713271);
+        background-image: url(images1.jpg);
+        background-size: 100%;
+        
+    }
+    .container{
+        border: 1px solid #901590;
+        padding: 20px;
+        border-radius: 18px;
+        background-color: white(0, 0, 0);
+        box-shadow: 0px 3px 15px rgba(160, 136, 154, 0.263);
+    }
+    input{
+        width: 300px;
+        color: rgb(67, 7, 67);
+        border: none;
+        margin: 10px;
+        background: transparent;
+        text-align: right;
+        cursor: pointer;
+        font-size: 40px;
+        box-shadow: 0px 3px 15px rgba(161, 99, 168, 0.1);
+    }
+    input::placeholder{
+        color: rgb(185, 105, 174);
+    }
+    button{
+        border: none;
+        width: 60px;
+        height: 60px;
+        border-radius: 30%;
+        margin: 10px;
+        cursor: pointer;
+        font-size: 20px;
+        box-shadow: -8px -8px 15px rgba(95, 6, 95, 0.526);
+        background: transparent;
+        color: rgb(168, 26, 187);
+    }
+    button:hover{
+        box-shadow: inset 2px 2px 5px #705e70, inset -3px -3px 7px purple;
+    }
+    .operators{
+        color: rgb(32, 1, 49);
+        
+        
+    }
+    
+    .eg{
+        background-color: #fb7;
+    }
+</style>
+<body>
+   <div class="container">
+    <input type="text" placeholder="0" id="result">
+   
+     <div>
+        <button class="operators" onclick="clearResult()">  C</button>
+        <button class="operators" onclick="deleteResult('←')">←</button>
+        <button class="operators" onclick="insertValue('%')">%</button>
+        <button class="operators" onclick="insertValue('/')">÷</button>
+     </div>
+    <div>
+        <button onclick="insertValue('7')">7</button>
+        <button onclick="insertValue('8')">8</button>
+        <button onclick="insertValue('9')">9</button>
+        <button class= "operators" onclick="insertValue('*')">×</button>
+           </div>
+    <div>
+        <button onclick="insertValue('4')">4</button>
+        <button onclick="insertValue('5')">5</button>
+        <button onclick="insertValue('6')">6</button>
+        <button class="operators" onclick="insertValue('-')">-</button>
+    </div>
+
+    <div>
+        <button onclick="insertValue('1')">1</button>
+        <button onclick="insertValue('2')">2</button>
+        <button onclick="insertValue('3')">3</button>
+        <button class="operators" onclick="insertValue('+')">+</button>
+    </div>
+    <div>
+        <button onclick="insertValue('00')">00</button>
+        <button onclick="insertValue('0')">0</button>
+        <button onclick="insertValue('.')">.</button>
+        <button class="eq" onclick=" calculate()">=</button>
+    </div>
+   </div>
+
+   <script>
+    function insertValue(value){
+        result.value +=value;
+    }
+    function clearResult() {
+        result.value = '';
+        
+    }
+
+    function deleteResult() {
+        result.value = result.value.slice(0,-1);
+    }
+
+    function calculate() {
+        try{
+            result.value = eval(result.value);
+        } catch(error){
+            result.value = 'Error';
+        }
+    }
+   </script>
+</body>
+</html<!DOCTYPE html>
+<html>
+<head>
+<title>Page Title</title>
+</head>
+<body>
+
+<h1>© copyright reserved</h1>
+
+
+</body>
+</html>
